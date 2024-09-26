@@ -11,6 +11,6 @@ jobs:
         uses: peter-evans/repository-dispatch@v3
         with:
             token: ${{ secrets.COMMON_BUILD_PIPELINE_PAT }}
-            repository: chain-builds/builds
+            repository: pde-build-demo/builds
             event-type: dependency_updated
             client-payload: '{"triggered_by": "${{ github.repository }}, on push event", "commit_sha": "${{ github.sha }}", "branch": "${{ github.ref }}"}'
